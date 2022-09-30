@@ -11,9 +11,11 @@ public class Task4 {
             while (f != c) {
                 if (f >=1 && f <=9) {
                     if (c > f) System.out.println("Загаданное число больше");
-                    if (c < f) System.out.println("Загаданное число меньше");
-                    System.out.println("Введите другое целое число от 1 до 9 включительно или 0 для выхода");
-                    f = in.nextByte();
+                    else {
+                        System.out.println("Загаданное число меньше");
+                        System.out.println("Введите другое целое число от 1 до 9 включительно или 0 для выхода");
+                        f = in.nextByte();
+                    }
                 } else if (f == 0) {
                     System.out.println("Выход из программы");
                     break;
