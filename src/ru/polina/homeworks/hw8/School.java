@@ -12,8 +12,8 @@ import java.util.Arrays;
         private Teacher[] teachers = new Teacher[12];
         private Pupil[] pupils = new Pupil[25];
 
-        //private int teachersNumber = teachers.length;//работает учителей
-        //private int pupilsNumber = 15; // ходят в школу
+        private int teachersNumber = 6;//работает учителей
+        private int pupilsNumber = 15; // ходят в школу
 
 
         public School(String schoolName, Director director){
@@ -24,14 +24,20 @@ import java.util.Arrays;
                 this.director = director;
         }
         public void addTeacher() {
-                for (int i = 0; i < teachers.length; i++){
-                        teachers[i] = Teacher.getTeacher();
+                for (int i = 0; i < teachersNumber; i++){
+                        teachers[i] = Teacher.getTeacher(); // вопрос, -
+                }
+        }
+
+        public void addPupil() {
+                for (int i = 0; i < pupilsNumber; i++){
+                        pupils[i] = Pupil.getPupil();
                 }
         }
 
 
 
-        /*public void schoolDay(){
+        public void schoolDay(){
                 director.schoolDayBegin();
                 for (Teacher teacher : teachers) {
                         if (teacher == null) break;
@@ -43,7 +49,7 @@ import java.util.Arrays;
                         }
                 }
                 director.schoolDayEnd();
-        }*/
+        }
 
 
         public String getSchoolName() {

@@ -1,7 +1,7 @@
 package ru.polina.homeworks.hw8.base;
 import ru.polina.homeworks.hw8.base.Individual;
 abstract public class Education extends Individual{
-    private String subject;
+    protected String subject;
 
     public Education(String name, int age, String subject){
         super(name, age);

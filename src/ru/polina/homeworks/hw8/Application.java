@@ -10,16 +10,16 @@ public class Application {
         School school1 = new School("ПФМЛ239", dir1);
 
         school1.addTeacher();
+        school1.addPupil();
 
         System.out.println(school1);
 
 
-        //dir1.schoolDayBegin();
+        school1.schoolDay();
+        System.out.println(school1);
 
-        //school1.schoolDay();
 
 
-        //dir1.schoolDayEnd();
 
 
 

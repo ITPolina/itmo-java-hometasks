@@ -17,16 +17,17 @@ public final class Pupil extends Education {
     public static Pupil getPupil(){
         int l = (int)(Math.random()*5);
         int a = (int)(7 + Math.random()*8);
-        String n = pupilsNames[(int)(Math.random()*(pupilsNames.length +1))];
-        String s = subjects[(int)(Math.random()*(subjects.length +1))];
+        String n = pupilsNames[(int)(Math.random()*(pupilsNames.length))];
+        String s = subjects[(int)(Math.random()*(subjects.length))];
         Pupil pupil = new Pupil(n, a, s,l);
         return pupil;
     }
 
 
-    public void study(Teacher teacher){
+    public void study(){   //Teacher teacher){
         //this.level = Math.min(this.level + (int)(Math.random()*(teacher.getSkill() +1)), teacher.getSkill());
-        this.level += (int)(Math.random()*(teacher.getSkill() +1));
+        //addLevel = Teacher.getTeacher().getSkill();
+        this.level += (int)(Math.random()*(Teacher.getTeacher().getSkill() +1));// не понятно
 
     }
 
