@@ -47,10 +47,11 @@ public class StudentTask {
 
 
         //  2. Найти средний возраст учеников
-        //System.out.println("Задание 2");
-        //Double studentAverageAge = students.stream()
-               //.          student ->(int) (ChronoUnit.YEARS.between(student.getBirth(), LocalDate.now())));
-
+        System.out.println("Задание 2");
+        Double studentAverageAge = students.stream()
+                .collect(Collectors.summingDouble(student ->
+                        (double)((ChronoUnit.YEARS.between(student.getBirth(), LocalDate.now())))))/students.size();
+        System.out.println("Средний возраст учеников " + studentAverageAge);
 
         //  3. Найти самого младшего ученика
         System.out.println("Задание 3");
@@ -86,6 +87,10 @@ public class StudentTask {
         System.out.println(ageMap);
         //  6. Убрать учеников с одинаковыми именами, имена и дату рождения оставшихся вывести в консоль
         System.out.println("Задание 6");
+       // students.stream().distinct()
+         //       .forEach(System.out::println);
+
+
 
         //  7. Отсортировать по полу, потом по дате рождения, потом по имени (в обратном порядке), собрать в список (List)
         System.out.println("Задание 7");

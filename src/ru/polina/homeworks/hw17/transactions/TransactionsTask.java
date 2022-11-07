@@ -37,9 +37,12 @@ public class TransactionsTask {
         System.out.println(map01);
 
         //  2. найти сумму транзакций по всем аккаунтам
-        //Stream<Transaction> transactionSum = transactionStream
-                ;
 
+        Stream<Transaction> transactionStream02 = Stream.of(transaction1, transaction2, transaction3,
+                transaction4, transaction5, transaction6, transaction7);
+
+        Long sum = transactionStream02.collect(Collectors.summingLong(transaction -> transaction.getSum()));
+        System.out.println(sum);
 
     }
 }
